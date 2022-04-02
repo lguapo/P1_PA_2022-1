@@ -3,29 +3,36 @@
 #include <string.h>
 
 //nova ideia: ficaria mais limpo se enumerasse por tecla ao invés de letra. 
-typedef (enum){
-    t2=2,
-    t3,
-    t4,
-    t5,
-    t6,
-    t7,
-    t8,
-    t9
-}tecla;
+typedef enum{
+    //isso é a tecla2
+    a=1,b,c,
+    //essa é a tecla 3
+    d=1,e,f,
+    //essa é a tecla....
+    g=1,h,i,
+    j=1,k,l,
+    m=1,n,o,
+    p=1,q,r,s,
+    t=1,u,v,
+    w=1,x,y,z
 
-int teclas(){
-    //criar contadores de cada tecla
-    int ( i, cont2, cont3, cont4, cont5, cont6, cont7, cont8, cont9 ) = (0,0,0,0,0,0,0,0,0);
-    char palavra[50];
+}letras;
+// porque assim a ja sai como valor 1, b como 2 e c como 3
+//que é o numero de vezes que a pessoa tem q apertar a tecla sacou??
+char palavra[50];
 
-    printf("digite a palavra %c\n",palavra);
+int word(){
+
+    printf("digite a palavra\n");
     scanf("%c",&palavra);
 
-    //garantir que a palavra esta limitada a 50 caracteres.
-    if(palavra[i]<=(i=50)){
+    system("pause");
+    return (palavra);
+}
 
-    }
-    
+int main(){
 
+    word();
+
+    return 0;
 }
