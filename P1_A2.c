@@ -10,9 +10,9 @@ char alfbt[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 'o','p','q','r','s','t','u','v','w','x','y','z'};
 
 int letras(){
-//--------------------------------------------------------------------------------------------------
+
    scanf("%c", &palavra);
-   
+
     for(int ii=0;ii<strlen(palavra);ii++){
         for(int jj=0;jj<strlen(alfbt);jj++){
             //tolower para eliminar sensibilidade a letras maiusculas
@@ -59,12 +59,9 @@ int letras(){
     }
     return (palavra);
 }
-
 int main(){
 
     printf("digite a palavra desejada:\n");
-    
-
     letras();
 
     system("pause");
