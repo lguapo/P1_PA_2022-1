@@ -5,20 +5,18 @@
 nova proposta: estavamos complicando demais, cada vez adicionando novos recursos e comandos sem total ciência 
 de suas aplicações e propriedades, agora mudamos a abordagem para algo o mais simples e funcional possivel
 */
-static char palavra[50];
+static char palavra[51];
 char alfbt[26] ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 'o','p','q','r','s','t','u','v','w','x','y','z'};
 
 int letras(){
-
-    int jj;
-
 //--------------------------------------------------------------------------------------------------
    scanf("%c", &palavra);
+   
     for(int ii=0;ii<strlen(palavra);ii++){
-        for(jj=0;jj<strlen(alfbt);jj++){
-
-            if(palavra[ii] == alfbt[jj]){
+        for(int jj=0;jj<strlen(alfbt);jj++){
+            //tolower para eliminar sensibilidade a letras maiusculas
+            if(tolower(palavra[ii]) == tolower(alfbt[jj])){
                 switch(jj){
                     //tecla 2: a,b,c
                     case 0: printf("#2=1\n");break;
@@ -54,16 +52,11 @@ int letras(){
                     case 23: printf("#9=2\n");break;
                     case 24: printf("#9=3\n");break;
                     case 25: printf("#9=4\n");break;
-
                 }
                 letras();
-            }
-        
-        }
-
-        
+            }        
+        }  
     }
-
     return (palavra);
 }
 
